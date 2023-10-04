@@ -2,12 +2,15 @@
 #include <SFML/Graphics.hpp>
 #include "size.h"
 #include "game.h"
-
+#include<windows.h>
+#include<mmsystem.h>
 using namespace std;
 
                // pilest file mein for 3 cards setting krni
 
 int main(int argc, char* argv[]) {
+	sndPlaySound(TEXT("bscs22101-input.wav"), SND_ASYNC);
+
 	srand(time(0));
 	sf::RenderWindow window;
 	window.create(sf::VideoMode(winWidth, winHeight), "Solitaire", sf::Style::Close);
